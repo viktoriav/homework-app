@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Viktoria Viil" />
+    
+    <title>ITV0130</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css"></link>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-default nav">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand brand" href="loginform.html">ÕIS-ITV0130</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right navbutton">
+        <li><a href="info.html" class="navlinks">Info</a></li>
+        <li><a href="teacherindex.html" class="navlinks">Abi</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+    <div class="containermain">
+        <form>
+            <div class="row">
+                <div class="links">
+                    <div class="col-xs-6">
+                        <a href="#" class="active links" id="login">Logi sisse</a>
+                    </div>
+                    <div class="col-xs-6">
+                        <a href="#" class="links" id="registration">Registreeru</a>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <form id="login-form" action="" method="post" role="form" style="display: block;">
+                <div class="alert-error alerterror" id="alert"></div>
+                <div class="form-input">
+                        <input type= "text" class="form-control" name="username" id= "username" tabindex="1" placeholder="Kasutajanimi" value="" required>                  
+                </div>
+                <div class="form-input">
+                    <input type= "password" class="form-control" name="password" id= "password" tabindex="2" placeholder="Parool" value="" required>
+                </div>
+
+                <div class= "register-form container1">
+                    <div class="form-input">
+                         <input type="password" class="form-control" name="confirm-password" id="confirm-password" tabindex="3" placeholder="Korda parooli">
+                    </div>
+                    <div class="form-input">
+                          <input type="text" class="form-control" name="fullname" id="fullname" tabindex="4" placeholder="Nimi Perekonnanimi" value="">
+                    </div>
+                    <div class="form-input" id="register-checkbox">
+                        <div class="col-xs-6">
+                           <input class="cb radio-custom" id="student-cb" type="radio" name="radio-group"><label for="student-cb" name="radio-group">Tudeng</label>  
+                        </div>  
+                        <div class="col-xs-6">
+                           <input class="cb radio-custom" id="teacher-cb" type="radio" name="radio-group"><label for="teacher-cb" name="radio-group">Õppejõud</label>  
+                        </div>   
+                    </div>
+                    <div>
+                        <input type="submit" name="register-submit" id="register-submit" tabindex="4" class="btn btn-submit" value="Registreeru">
+                    </div>
+                    </div>  
+                    <div>   
+                        <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="btn btn-submit" value="Logi sisse"><br>
+                    </div>
+            </form>
+
+        </form> 
+    </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="js/login.js"></script>
+        
+    </body>
+
+</html>

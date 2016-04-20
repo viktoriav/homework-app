@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0, minimum-scale = 1.0, maximum-scale = 1.0, user-scalable = no"/>
+    <meta name="author" content="Viktoria Viil" />
+
+    <title>ITV0130</title>
+
+    <link rel="stylesheet" href="css/footable.core.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css"></link>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-default nav">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand brand" href="loginform.html">ÕIS-ITV0130</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right navbutton">
+        <li><a href="teacherindex.html" class="navlinks">ESILEHT</a></li>
+        <li><a href="hindedk6ik.html" class="navlinks">HINDED</a></li>
+        <li><a href="save.html" class="navlinks">ESITATUD TÖÖD</a></li>
+        <li><a href="materjalid.html" class="navlinks">MATERJALID</a></li>
+        <li><a href="loginform.html" class="logout">LOGI VÄLJA</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div class="col-xs-12">
+    <div class="containerindex">
+        <div><h2 class="header2">Hinded</h2></div>
+        <HR class="style-one">
+
+        <input class="search" type="text" id="search" placeholder="Otsi nime"></input>
+        <table class="table footable table-bordered table-hover" id="example-2">
+            <thead>
+            <tr>
+                <th>Nimi</th>
+                <th data-hide="phone">Kodutöö 1</th>
+                <th data-hide="phone,tablet">Kodutöö 2</th>
+                <th data-hide="phone,tablet">Kontrolltöö</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Tudeng1</td>
+                <td>5</td>
+                <td>5</td>
+                <td>x</td>
+            </tr>
+            <tr>
+                <td>Tudeng2</td>
+                <td>0</td>
+                <td>5</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>Tudeng3</td>
+                <td>x</td>
+                <td>x</td>
+                <td>x</td>
+            </tr>
+            <tr>
+                <td>Tudeng4</td>
+                <td>x</td>
+                <td>x</td>
+                <td>x</td>
+            </tr>
+            </tbody>
+        </table>         
+
+    </div>
+</div>
+<script src="js/footable.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $('.footable').footable();
+    });
+</script>
+
+<script type="text/javascript">
+$("#search").on("keyup", function() {
+    var value = $(this).val();
+
+    $("table tr").each(function(index) {
+        if (index !== 0) {
+
+            $row = $(this);
+
+            var id = $row.find("td:first").text();
+
+            if (id.indexOf(value) !== 0) {
+                $row.hide();
+            }
+            else {
+                $row.show();
+            }
+        }
+    });
+});
+</script>
+<script src="js/jquery.tabledit.min.js"></script>
+<script type="text/javascript">
+            $('#example-2').Tabledit({
+                columns: {
+                    identifier: [0, 'id'],
+                    editable: [[2, 'Kodutöö 1'],[3, 'Kodutöö 2'],[4, 'Kodutöö 3'],[5, 'Kodutöö 4']]
+                }
+            });
+</script>
+
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> 
+    </body>
+</html>
